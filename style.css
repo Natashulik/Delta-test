@@ -32,6 +32,12 @@
   position: relative;
 }
 
+.table__row:nth-child(2) .table__cell:first-child,
+.table__row:nth-child(3) .table__cell:first-child,
+.table__row:nth-child(4) .table__cell:first-child {
+  padding-left: 30px;
+}
+
 .table__cell {
   padding: 16px 12px;
   text-align: left;
