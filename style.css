@@ -1,0 +1,112 @@
+.table {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  border-radius: 4px;
+  color: gray;
+  font-family: "Arial";
+  font-weight: 600;
+}
+
+.table__head {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+}
+
+.table__body {
+  display: flex;
+  flex-direction: column;
+}
+
+.table__row {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  transition: background-color 0.2s ease;
+}
+
+.table__row:hover .table__cell {
+  cursor: pointer;
+}
+
+.table__row_active {
+  position: relative;
+}
+
+.table__cell {
+  padding: 16px 12px;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  border: 2px solid white;
+  background-color: rgb(246, 244, 244);
+}
+
+.table__cell:nth-child(2) {
+  background-color: rgb(220, 241, 251);
+}
+
+.table__cell:nth-child(2),
+.table__cell:nth-child(3),
+.table__cell:nth-child(4) {
+  justify-content: flex-end;
+}
+
+.trend {
+  margin-left: 15px;
+}
+
+.trend_positive,
+.trend_neutral {
+  color: #3f9842;
+}
+
+.trend_negative {
+  color: red;
+}
+
+.trend-cell_positive {
+  background-color: rgba(76, 175, 80, 0.1);
+}
+
+.trend-cell_negative {
+  background-color: rgba(244, 67, 54, 0.1);
+}
+
+.same-day-cell_positive {
+  background-color: rgba(76, 175, 80, 0.1);
+}
+
+.same-day-cell_negative {
+  background-color: rgba(244, 67, 54, 0.1);
+}
+
+/*-------График---------*/
+
+.chart-container {
+  grid-column: 1 / -1;
+  padding: 20px;
+  background: #fff;
+  height: 350px;
+  margin: 10px 50px;
+}
+
+.chart-container .highcharts-container {
+  width: 100%;
+  height: 100%;
+}
+
+.highcharts-credits {
+  display: none;
+}
+
+.highcharts-title {
+  display: none;
+}
+
+.highcharts-yaxis text {
+  display: none;
+}
+
+.highcharts-legend-item {
+  display: none;
+}
